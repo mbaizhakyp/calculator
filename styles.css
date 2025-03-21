@@ -1,65 +1,87 @@
 html {
-    text-align: center;
-    font-family: monospace;
-}
-
-#calc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    min-height: 95vh;
     height: 100vh;
-    background-color: blanchedalmond;
+
 }
-#container {
+
+
+body {
+    background-color: antiquewhite;
+}
+
+.calculator {
+    /* height: 700px; */
+    width: 500px;
     background-color: black;
-    border: 10px solid rgba(47,47,47,1);
+    margin: 100px auto;
+    border: 10px solid rgb(42, 38, 38);
     border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
-    gap: 2px;
 }
+
 #display {
-    grid-column: 1 / -1;
-    background-color: #b2b9b7;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding: 5px;
-    font-size: 5.5em;
-    font-weight: initial;
-    text-shadow: 1.3px 1.3px #383838;
-    margin: 5px;
-}
-button {
-    margin: 1px;
-    border-radius: 5%;
-    border: none;
-    font-weight: initial;
-    font-size: 2em;
+    background-color: grey;
+    margin: 4px;
+    padding: 10px;
+    font-size: 90px;
+    text-align: right;
     font-family: monospace;
-    color: black;
 }
 
-#zero {
-    grid-column: span 2;
+.buttons button {
+    background-color: grey;
+    padding: 35px 40px;
+    font-size: 40px;
+    font-family: monospace;
+    margin: 4px;
+    flex: 1;
+    max-height: 100px;
+    border-radius: 4px;
+    border: none;
 }
 
-.equals,
-.operator {
-    background-color: #ff8f1f;
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.operand,
-.decimal {
-    background-color: #217c7e;
+button.zero {
+    flex: 4.4;
 }
 
-.clear,
-.percent,
-.sign {
-    background-color: #1e90ff;
+button.ac {
+    padding: 25px 35px;
+}
+
+button.sign {
+    padding: 25px 22px;
+}
+
+button.green {
+    background-color: #217C7E;
+}
+
+button.blue {
+    background-color: dodgerblue;
+}
+
+button.orange {
+    background-color: #FF8F1F;
+}
+
+.divide:focus,
+.multiply:focus,
+.plus:focus,
+.minus:focus {
+    background-color: #ffc183;
+}
+
+.equal:active {
+    background-color: #ffc183;
+}
+
+.green:active {
+    background-color: #33b9bb;
+}
+
+.blue:active {
+    background-color: rgb(123, 189, 255);
 }
