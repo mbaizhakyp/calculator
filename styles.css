@@ -24,6 +24,7 @@ body {
     font-size: 90px;
     text-align: right;
     font-family: monospace;
+    overflow: hidden;
 }
 
 .buttons button {
